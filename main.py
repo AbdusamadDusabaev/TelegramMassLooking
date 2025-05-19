@@ -15,7 +15,7 @@ user_statuses = dict()
 
 
 def get_usernames() -> list[str]:
-    with open(file="output.csv", mode="r", encoding="utf-8") as file:
+    with open(file="input.csv", mode="r", encoding="utf-8") as file:
         reader = csv.reader(file)
         usernames = [row[0].strip() if row[0].startswith("@") else "@" + row[0].strip() for row in reader]
     return usernames
